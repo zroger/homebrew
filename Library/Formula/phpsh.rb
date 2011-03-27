@@ -19,5 +19,5 @@ class Phpsh <Formula
 
     ln_s (etc + 'phpsh'), (ENV['HOME'] + '/.phpsh')
   end
-
 end
+

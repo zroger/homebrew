@@ -12,5 +12,12 @@ class Phpsh <Formula
     bin.mkpath
     ln_s libexec+'phpsh.py', bin+'phpsh'
     man1.install "src/doc/phpsh.1"
+
+    (etc + 'phpsh').install "src/rc.php"
+    (etc + 'phpsh').install "src/php_manual.db"
+    (etc + 'phpsh').install "src/config.sample"
+
+    ln_s (etc + 'phpsh'), (ENV['HOME'] + '/.phpsh')
   end
+
 end
